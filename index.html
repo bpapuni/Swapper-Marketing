@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Collection Swap - Swapper</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="site.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Plus+Jakarta+Sans:wght@300&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/1a91afc60e.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <section class="home">
+            <img src="/images/WWTP Vertical Black.svg">
+            <div>
+                <h1>Collection Swap</h1>
+                <p>Collection Swap is a 2023 capstone project for our client, Robert Sutcliffe, a senior lecturer at WelTec. The project involved the development of a web application designed to streamline the exchange of collectibles among users.</p> 
+                <p>Focusing on the safety and well-being of children, Robert envisioned an online platform where young collectors could securely trade their items in a transparent and secure environment.</p>
+                <p>After 13 weeks, our team developed <em>“Swapper”</em> - a safe and community-oriented collectibles trading platform. Swapper is designed to assist users with exchanging items and completing their collections. Moreover, users can effortlessly swap collectibles without the need for face-to-face interactions, making the process smooth, and hassle-free. </p>
+                <p> We developed key features, such as the capability to perform multiple swaps simultaneously, a comprehensive swap history for tracking past and ongoing swaps, and the ability for users to provide feedback once a swap is successfully completed. These features were instrumental in delivering the complete Swapper website as envisioned by our client.</p>
+            </div>
+            <div class="doodle">
+                <img src="/images/2.1.png" />
+            </div>
+            <div class="doodle">
+                <img src="/images/4.1.png" />
+            </div>
+        </section>
+        <section class="screenshots">
+            <button onclick="RotateScreenshot(false)"><i class="fa-solid fa-chevron-left"></i></button>
+            <div onclick="ZoomScreenshot(this)" tabindex="0">
+                <!-- <h1>Screenshots</h1> -->
+                <img class="screenshot" src="/images/screenshots/1.png" >
+            </div>
+            <button onclick="RotateScreenshot(true)"><i class="fa-solid fa-chevron-right"></i></i></button>
+        </section>
+        <section class="info">
+            <h1>Our Solution</h1>
+            <div>
+                <div>
+                    <p>To create a system that empowers users to manage their collections and facilitate item swaps, our development team put into practice a diverse set of technical skills acquired during our enrolment at WelTec. We effectively utilized the Entity Framework's code-first approach to define a database structure through code, creating model classes for user collections, swap records, and feedback data. </p>
+                    <p>We implemented a robust matching system designed to connect users seeking items from each other's collections. The core of this matching system involves the analysis of user collections. We serialize each user's collection into a JSON format, allowing for easy comparison and identification of duplicate and missing items. Our algorithm inspects the contents of these JSON collections, identifying items that are duplicates for one user while fulfilling a need for another. This streamlined process seamlessly connects potential swap partners based on their specific item requirements.</p>
+                    <p>In addition, we employed AJAX-based page navigation and history management to create dynamic, responsive web pages that display potential swaps, track swap progress, and showcase user feedback, ensuring a smooth and intuitive user experience. Our commitment to user-centric design has allowed us to create interfaces that are both visually appealing and user-friendly. </p>
+                    <p>Moreover, the system's database management capabilities allow a system admin to seamlessly incorporate new collections and sponsor information into the system. These collective technical skills have culminated in a secure, user-friendly, and efficiently managed system that emphasizes children's safety and supports contactless swaps, showcasing our readiness to provide real-world IT solutions.</p>
+                    <img src="/images/14.png" />
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <div>
+                <h1>About Us</h1>
+                <p>Our development team consists of three dedicated undergraduate students from Whitireia and WelTec. Swapper is the culmination of our three year journey, where we get to showcase and apply the knowledge we've gained during our studies. </p>
+                <div class="profiles">
+                    <div>
+                        <img src="/images/brent.png">
+                        <div>
+                            <h3>Brent Papuni</h3>
+                            <h5>Lead Programmer / System Architect</h5>
+                        </div>
+                        <p>I'm a soon-to-be graduate majoring in Software Development. I'm genuinely fascinated by software development due to its inherent problem-solving nature and the potential to drive continuous improvement and increased efficiency. </p>
+                        <p>I've always enjoyed using technology to simplify my life, and the opportunity to create impactful solutions that enhance the quality of others' lives resonates with me.</p>
+                        <p>I am proficient in C# / ASP.NET, JavaScript, and SQL, but relish the opportunity to continue learning other technologies. </p>
+                    </div>
+                    <div>
+                        <img src="/images/samuel.png">
+                        <div>
+                            <h3>Samuel Anderton-Gough</h3>
+                            <h5>Project Manager / Data Analyst</h5>
+                        </div>
+                        <p>As the end of the 2023 academic year approaches, I will be due to graduate with a Bachelor of Information Technology majoring in Data Analysis. </p>
+                        <p>Over the course of the project, I have enjoyed my time working with a number of different tools such as SQL and ASP.NET to bring the website to life. </p> <p>Now, as I venture into the next phase of my career, I aim to apply these recently acquired skills in a professional role within the industry.</p>
+                    </div>
+                    <div>
+                        <img src="/images/nelson.png">
+                        <div>
+                            <h3>Nelson Ah Hoi</h3>
+                            <h5>Lead Tester / Programmer</h5>
+                        </div>
+                        <p>Nearing the end of 2023, I am currently in my final trimester of a 3-year Bachelor of Information Technology at Te Pukenga - WelTec, majoring in software development. </p>
+                        <p>During my time at WelTec, I've had the opportunity to work with various technology stacks and continuously expand my knowledge. I've taken classes in C#, the Selenium framework, Python, and general web development, which have helped me improve my skills and stay updated with industry trends.</p>
+                        <p>I intend to use the knowledge and experience I've gained over the last three years and apply it in the IT sector, hopefully in the field of software development.</p>
+                    </div>
+                </div>
+                <div class="acknowledgements">
+                    <p><strong>Team Advisor:</strong> Dr. Abubakar Siddique</p>
+                    <p><strong>Project Client:</strong> Robert Sutcliffe</p>
+                </div>
+            </div>
+        </section>
+        
+        <script async defer>
+            const screenshotDiv = document.getElementsByClassName("screenshot")[0].parentElement;
+            let touchStartX = null;
+
+            screenshotDiv.addEventListener("touchstart", (e) => {
+                touchStartX = e.touches[0].clientX;
+                LockScroll();
+            });
+
+            screenshotDiv.addEventListener("touchend", (e) => {
+                touchStartX = null;
+                UnlockScroll();
+            });
+
+            screenshotDiv.addEventListener("touchmove", (e) => {
+                if (touchStartX !== null) {
+                    const touchEndX = e.touches[0].clientX;
+                    const deltaX = touchEndX - touchStartX;
+
+                    if (Math.abs(deltaX) > 50) {
+                        if (deltaX > 0) {
+                            RotateScreenshot(true);
+                        } else {
+                            RotateScreenshot(false);
+                        }
+
+                        touchStartX = null;
+                    }
+                }
+            });
+
+            screenshotDiv.addEventListener("keydown", function(event) {
+                if (event.key === "ArrowLeft") {
+                    RotateScreenshot(false);
+                } else if (event.key === "ArrowRight") {
+                    RotateScreenshot(true);
+                }
+            });
+
+            function UnlockScroll() {
+                const scrollY = Math.abs(parseFloat(document.body.style.top))
+                document.body.style.position = "static";
+                window.scrollTo(0, scrollY);
+            };
+
+            function LockScroll() {
+                const scrollY = window.scrollY
+                document.body.style.position = "fixed";
+                document.body.style.top = `-${scrollY}px`;
+            };
+
+            function RotateScreenshot(next) {
+                const currentIndex = document.getElementsByClassName("screenshot")[0].src.split("/screenshots/")[1].split(".")[0];
+                const nextIndex = next ? currentIndex == 14 ? 1 : +currentIndex + 1 : currentIndex == 1 ? 14 : +currentIndex - 1;
+                document.getElementsByClassName("screenshot")[0].src = `/images/screenshots/${nextIndex}.png`;
+            }
+
+            function ZoomScreenshot(e) {
+                const zoomed = e.classList.contains("zoomed");
+                if (zoomed) {
+                    ZoomOut(e);
+                    UnlockScroll();
+                } else {
+                    ZoomIn(e);
+                    LockScroll();
+                }
+            }
+
+            function ZoomIn(e) {
+                e.style.cursor = "zoom-out";
+                e.classList.add("zoomed");
+                const rect = e.getBoundingClientRect();
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const elementTop = rect.top + scrollTop;
+                window.scrollTo(0, elementTop);
+            }
+
+            function ZoomOut(e) {
+                e.style.cursor = "zoom-in";
+                e.classList.remove("zoomed");
+            }
+        </script>
+    </body>
+</html>

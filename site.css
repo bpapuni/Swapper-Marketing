@@ -1,0 +1,406 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #F5F2EE;
+    --brand-neutral: #ccc;
+    --brand-light-blue: #6f9fc1;
+    --brand-blue: #3666C2;
+    --brand-yellow: #F9C612;
+    --brand-gold: #ffc926;
+    --brand-red: #E84744;
+    --brand-green: #83A64F;
+    --brand-green-alt: #b5db7c;
+    --brand-orange: #F97C3B;
+    --brand-hotpink: #FF69B4;
+    --brand-pink: #FFCCCC;
+}
+
+body {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: var(--background);
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 3rem;
+}
+
+h3, h5, p {
+    margin: 0;
+}
+
+h5 {
+    color: gray;
+    font-style: italic;
+    font-weight: 400;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    padding: 2rem;
+}
+
+section.home {
+    padding-top: 11.5rem;
+}
+
+section.home h1 {
+    width: 80%;
+}
+
+section.home > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+section.home > div em {
+    font-weight: 600;
+    color: var(--brand-blue);
+}
+
+section.home > img:nth-of-type(1) {
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    max-width: 20rem;
+    width: 50%;
+}
+
+section.home > div.doodle:nth-of-type(2) {
+    position: absolute;
+    top: 0;
+    right: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    width: 9rem;
+    height: 14rem;
+    background: var(--brand-gold);
+    z-index: -1;
+}
+
+section.home > div.doodle:nth-of-type(2) > img {
+    margin-bottom: -0.5rem;
+}
+
+section.home > div.doodle:nth-of-type(3) {
+    display: none;
+}
+
+section.screenshots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+section.screenshots::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    background: var(--brand-blue);
+    z-index: -1;
+    pointer-events: none;
+}
+
+section.screenshots > button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: calc(100% - 2rem);
+    font-size: 1rem;
+    color: var(--background);
+    background: #00000022;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+section.screenshots > button:nth-last-of-type(1) {
+    right: 1rem;
+    border-radius: 0 4px 4px 0;
+}
+
+section.screenshots > button:nth-last-of-type(2) {
+    left: 1rem;
+    border-radius: 4px 0 0 4px;
+}
+
+section.screenshots > button:touch-down {
+    color: black;
+    background: var(--background);
+}
+
+section.screenshots > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background);
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 0 0 5px 2px #00000033;
+    cursor: zoom-in;
+}
+
+section.screenshots > div.zoomed {
+    height: 100vh;
+}
+
+section.screenshots > div > img {
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+section.info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+section.info > div > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+section.info > div > div > img {
+    width: clamp(8rem, 20rem, 100%);
+}
+
+section.about {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+}
+
+section.about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 65%;
+    background: var(--brand-gold);
+    z-index: -1;
+    pointer-events: none;
+}
+
+section.about > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: calc(1200px - 4rem);
+    width: 100%;
+}
+
+section.about .profiles {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+section.about .profiles p {
+    font-size: 10pt;
+}
+
+section.about .profiles > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    flex: 1;
+    min-width: 21rem;
+    padding: 1rem;
+    background: white;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+section.about .profiles > div > img {
+    width: 10rem;
+    border-radius: 50%;
+}
+
+@media (min-width: 1025px) {
+    section {
+        position: relative;
+        min-width: 1024px;
+        max-width: 1200px;
+        min-height: 40rem;
+        padding: 2rem;
+    }
+
+    section.home {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1.5rem;
+        padding-top: 6rem;
+    }
+
+    section.home > img:nth-of-type(1) {
+        position: absolute;
+        top: 0.5rem;
+        left: 1rem;
+        width: 25rem;
+    }
+
+    section.home > div {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 6rem;
+        width: 45%;
+    }
+
+    section.home > div em {
+        font-weight: 600;
+        color: var(--brand-blue);
+    }
+
+    section.home > div.doodle:nth-of-type(2) {
+        position: absolute;
+        top: -6rem;
+        left: 47%;
+        right: unset;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        max-width: 15rem;
+        width: 20%;
+        height: unset;
+        aspect-ratio: 15/25;
+        background: var(--brand-gold);
+        z-index: -1;
+    }
+
+    section.home > div.doodle:nth-of-type(2) > img {
+        width: 90%;
+        margin-bottom: -7%;
+    }
+
+    section.home > div.doodle:nth-of-type(3) {
+        position: absolute;
+        top: 2rem;
+        right: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        max-width: 20rem;
+        width: 27%;
+        aspect-ratio: 20/25;
+        background: var(--brand-orange);
+    }
+
+    section.home > div.doodle:nth-of-type(3) > img {
+        width: 120%;
+        margin-bottom: -7%;
+    }
+
+    section.screenshots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        max-width: 100%;
+        padding: 0 5rem;
+    }
+
+    section.screenshots:has(div.zoomed) {
+        background: #000000dd;
+    }
+
+    section.screenshots::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 28rem;
+        background: var(--brand-blue);
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    section.screenshots > button {
+        position: unset;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3rem;
+        height: unset;
+        aspect-ratio: 1/1;
+        font-size: 2rem;
+        color: var(--background);
+        background: black;
+        border: 1px solid black;
+        border-radius: 50% !important;
+        outline: none;
+        cursor: pointer;
+        box-shadow: 0 0 5px 2px #00000033;
+    }
+
+    section.screenshots > button:hover {
+        color: black;
+        background: var(--background);
+    }
+
+    section.screenshots > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: calc(1200px - 4rem);
+        margin: 4rem 0;
+        background: var(--background);
+        border: 2px solid black;
+        border-radius: 4px;
+        box-shadow: 0 0 5px 2px #00000033;
+        cursor: zoom-in;
+    }
+
+    section.info {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    section.info > div {
+        display: flex;
+        gap: 2rem;
+    }
+
+    section.info > div > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        flex: 1;
+    }
+
+    section.info > div > div > img {
+        width: 30rem;
+        object-fit: contain;
+    }
+
+    section.about .profiles {
+        gap: 3rem;
+    }
+}
