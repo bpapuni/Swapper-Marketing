@@ -145,7 +145,7 @@
             function RotateScreenshot(next) {
                 const currentIndex = document.getElementsByClassName("screenshot")[0].src.split("/screenshots/")[1].split(".")[0];
                 const nextIndex = next ? currentIndex == 14 ? 1 : +currentIndex + 1 : currentIndex == 1 ? 14 : +currentIndex - 1;
-                document.getElementsByClassName("screenshot")[0].src = `/images/screenshots/${nextIndex}.png`;
+                document.getElementsByClassName("screenshot")[0].src = `images/screenshots/${nextIndex}.png`;
             }
 
             function ZoomScreenshot(e) {
