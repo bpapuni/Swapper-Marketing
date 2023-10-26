@@ -58,7 +58,7 @@ section.home {
 }
 
 section.home h1 {
-    width: 80%;
+    width: 75%;
 }
 
 section.home > div {
@@ -253,6 +253,16 @@ section.about .profiles > div {
 section.about .profiles > div > img {
     width: 10rem;
     border-radius: 50%;
+}
+
+@media (max-width: 424px) {
+
+h1 {
+    font-size: 2rem
+}
+
+section.about .profiles > div {
+    min-width: 100%;
 }
 
 @media (min-width: 1025px) {
