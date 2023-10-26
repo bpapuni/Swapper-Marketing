@@ -413,6 +413,7 @@ section.about .profiles > div > img {
         outline: none;
         cursor: pointer;
         z-index: 20;
+        border: 1px solid black;
         box-shadow: 0 0 5px 2px #00000033;
     }
 
@@ -421,7 +422,7 @@ section.about .profiles > div > img {
         right: -4rem;
     }
 
-    section.screenshots > button:hover {
+    section.screenshots > div > button:hover {
         color: black;
         background: var(--background);
     }
