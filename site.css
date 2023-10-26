@@ -169,9 +169,10 @@ section.screenshots > div > span {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 2rem;
-    padding-inline: 0.5rem;
+    /* height: 2rem; */
+    padding: 0.5rem;
     color: white;
+    font-size: 6pt;
     background: #313030;
     z-index: 2;
 }
@@ -349,35 +350,6 @@ section.about .profiles > div > img {
         pointer-events: none;
     }
 
-    section.screenshots > div > button {
-        position: absolute;
-        left: -4rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 3rem;
-        height: 3rem;
-        font-size: 2rem;
-        color: var(--background);
-        background: #000000;
-        border: none;
-        border-radius: 50%;
-        outline: none;
-        cursor: pointer;
-        z-index: 20;
-        box-shadow: 0 0 5px 2px #00000033;
-    }
-
-    section.screenshots > div > button:nth-of-type(2) {
-        left: unset;
-        right: -4rem;
-    }
-
-    section.screenshots > button:hover {
-        color: black;
-        background: var(--background);
-    }
-
     section.screenshots > div {
         display: flex;
         align-items: center;
@@ -389,6 +361,10 @@ section.about .profiles > div > img {
         border-radius: 4px;
         box-shadow: 0 0 5px 2px #00000033;
         cursor: zoom-in;
+    }
+
+    section.screenshots > div > span {
+        font-size: 10pt;
     }
 
     section.info {
@@ -417,5 +393,36 @@ section.about .profiles > div > img {
 
     section.about .profiles {
         gap: 3rem;
+    }
+}
+
+@media (min-width: 1290px) {
+    section.screenshots > div > button {
+        position: absolute;
+        left: -4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3rem;
+        height: 3rem;
+        font-size: 2rem;
+        color: var(--background);
+        background: #000000;
+        border: none;
+        border-radius: 50%;
+        outline: none;
+        cursor: pointer;
+        z-index: 20;
+        box-shadow: 0 0 5px 2px #00000033;
+    }
+
+    section.screenshots > div > button:nth-of-type(2) {
+        left: unset;
+        right: -4rem;
+    }
+
+    section.screenshots > button:hover {
+        color: black;
+        background: var(--background);
     }
 }

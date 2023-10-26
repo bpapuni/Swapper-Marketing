@@ -1,17 +1,17 @@
 {
-    "1": "Caption 1",
-    "2": "Caption 2",
-    "3": "Caption 3",
-    "4": "Caption 4",
-    "5": "Caption 5",
-    "6": "Caption 6",
-    "7": "Caption 7",
-    "8": "Caption 8",
-    "9": "Caption 9",
-    "10": "Caption 10",
-    "11": "Caption 11",
-    "12": "Caption 12",
-    "13": "Caption 13",
-    "14": "Caption 14"
+    "1": "Swapper Homepage",
+    "2": "From the homepage the web admin has the ability to add logos to showcase a sponsor's brand.",
+    "3": "Registration Page",
+    "4": "Login Page",
+    "5": "Manage Collections: The admin has the ability to create, update and delete collections from this page. Effectively controlling what collections are available to users.",
+    "6": "Edit Collection: The admin can rename a collection, add or remove items, and add sponsorship info to a collection from this page.",
+    "7": "Your Collections: A user can create, update and delete their personal collections from this page.",
+    "8": "Edit Collection (User): A user can rename their personal collection, update the number of items it contains, or enable an option to donate their collection.",
+    "9": "Find Swaps: A list of potential swaps are displayed to the user. Only swaps where each user requires an item from the other are displayed.",
+    "10": "Your Swaps: A table containing the user's past and present swaps. This displays the progress of each swap. Swaps are colour co-ordinated based on their status.",
+    "11": "View Swap: Clicking on a swap in the 'Your Swaps' table opens a detailed view of the swap with any instructions for the user.",
+    "12": "Member Profile: Member profiles display a user's feedback and overall rating. A user can also opt to block another user from this page.",
+    "13": "Account Management",
+    "14": "Support / FAQ"
 }
   
