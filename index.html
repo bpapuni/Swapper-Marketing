@@ -30,12 +30,12 @@
             </div>
         </section>
         <section class="screenshots">
-            <button onclick="RotateScreenshot(false)"><i class="fa-solid fa-chevron-left"></i></button>
-            <div onclick="ZoomScreenshot(this)" tabindex="0">
-                <!-- <h1>Screenshots</h1> -->
+            <div onclick="ZoomScreenshot(event)" tabindex="0">
+                <button onclick="RotateScreenshot(event, false)"><i class="fa-solid fa-chevron-left"></i></button>
                 <img class="screenshot" src="images/screenshots/1.png" >
+                <span class="caption">Test</span>
+                <button onclick="RotateScreenshot(event, true)"><i class="fa-solid fa-chevron-right"></i></i></button>
             </div>
-            <button onclick="RotateScreenshot(true)"><i class="fa-solid fa-chevron-right"></i></i></button>
         </section>
         <section class="info">
             <h1>Our Solution</h1>
@@ -91,87 +91,6 @@
             </div>
         </section>
         
-        <script async defer>
-            const screenshotDiv = document.getElementsByClassName("screenshot")[0].parentElement;
-            let touchStartX = null;
-
-            screenshotDiv.addEventListener("touchstart", (e) => {
-                touchStartX = e.touches[0].clientX;
-                LockScroll();
-            });
-
-            screenshotDiv.addEventListener("touchend", (e) => {
-                touchStartX = null;
-                UnlockScroll();
-            });
-
-            screenshotDiv.addEventListener("touchmove", (e) => {
-                if (touchStartX !== null) {
-                    const touchEndX = e.touches[0].clientX;
-                    const deltaX = touchEndX - touchStartX;
-
-                    if (Math.abs(deltaX) > 50) {
-                        if (deltaX > 0) {
-                            RotateScreenshot(true);
-                        } else {
-                            RotateScreenshot(false);
-                        }
-
-                        touchStartX = null;
-                    }
-                }
-            });
-
-            screenshotDiv.addEventListener("keydown", function(event) {
-                if (event.key === "ArrowLeft") {
-                    RotateScreenshot(false);
-                } else if (event.key === "ArrowRight") {
-                    RotateScreenshot(true);
-                }
-            });
-
-            function UnlockScroll() {
-                const scrollY = Math.abs(parseFloat(document.body.style.top))
-                document.body.style.position = "static";
-                window.scrollTo(0, scrollY);
-            };
-
-            function LockScroll() {
-                const scrollY = window.scrollY
-                document.body.style.position = "fixed";
-                document.body.style.top = `-${scrollY}px`;
-            };
-
-            function RotateScreenshot(next) {
-                const currentIndex = document.getElementsByClassName("screenshot")[0].src.split("/screenshots/")[1].split(".")[0];
-                const nextIndex = next ? currentIndex == 14 ? 1 : +currentIndex + 1 : currentIndex == 1 ? 14 : +currentIndex - 1;
-                document.getElementsByClassName("screenshot")[0].src = `images/screenshots/${nextIndex}.png`;
-            }
-
-            function ZoomScreenshot(e) {
-                const zoomed = e.classList.contains("zoomed");
-                if (zoomed) {
-                    ZoomOut(e);
-                    UnlockScroll();
-                } else {
-                    ZoomIn(e);
-                    LockScroll();
-                }
-            }
-
-            function ZoomIn(e) {
-                e.style.cursor = "zoom-out";
-                e.classList.add("zoomed");
-                const rect = e.getBoundingClientRect();
-                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                const elementTop = rect.top + scrollTop;
-                window.scrollTo(0, elementTop);
-            }
-
-            function ZoomOut(e) {
-                e.style.cursor = "zoom-in";
-                e.classList.remove("zoomed");
-            }
-        </script>
+        <script src="main.js" async defer></script>
     </body>
 </html>

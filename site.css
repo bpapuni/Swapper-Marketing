@@ -34,7 +34,7 @@ body {
 h1 {
     margin: 0;
     font-family: 'Montserrat Alternates', sans-serif;
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 h3, h5, p {
@@ -104,9 +104,14 @@ section.screenshots {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    /* gap: 1rem; */
     width: 100%;
     padding: 1rem;
+}
+
+section.screenshots.zoomed {
+    height: 100dvh;
+    background: #000000dd;
 }
 
 section.screenshots::before {
@@ -119,38 +124,10 @@ section.screenshots::before {
     pointer-events: none;
 }
 
-section.screenshots > button {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2rem;
-    height: calc(100% - 2rem);
-    font-size: 1rem;
-    color: var(--background);
-    background: #00000022;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-
-section.screenshots > button:nth-last-of-type(1) {
-    right: 1rem;
-    border-radius: 0 4px 4px 0;
-}
-
-section.screenshots > button:nth-last-of-type(2) {
-    left: 1rem;
-    border-radius: 4px 0 0 4px;
-}
-
-section.screenshots > button:touch-down {
-    color: black;
-    background: var(--background);
-}
-
 section.screenshots > div {
+    position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background: var(--background);
@@ -160,12 +137,48 @@ section.screenshots > div {
     cursor: zoom-in;
 }
 
-section.screenshots > div.zoomed {
-    height: 100vh;
+section.screenshots > div > button {
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 100%;
+    font-size: 1rem;
+    color: var(--background);
+    background: #00000022;
+    border: none;
+    /* border-radius: 50% !important; */
+    outline: none;
+    cursor: pointer;
+    z-index: 20;
+    /* box-shadow: 0 0 5px 2px #00000033; */
+}
+
+section.screenshots > div > button:nth-of-type(2) {
+    left: unset;
+    right: 0;
+}
+
+section.screenshots.zoomed > div {
+    max-width: unset;
+}
+
+section.screenshots > div > span {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+    padding-inline: 0.5rem;
+    color: white;
+    background: #313030;
+    z-index: 2;
 }
 
 section.screenshots > div > img {
     max-width: 100%;
+    max-height: calc(95dvh - 2rem);
     object-fit: contain;
     border-radius: 4px;
 }
@@ -323,11 +336,7 @@ section.about .profiles > div > img {
         justify-content: center;
         gap: 1rem;
         max-width: 100%;
-        padding: 0 5rem;
-    }
-
-    section.screenshots:has(div.zoomed) {
-        background: #000000dd;
+        /* padding: 0 5rem; */
     }
 
     section.screenshots::before {
@@ -340,22 +349,28 @@ section.about .profiles > div > img {
         pointer-events: none;
     }
 
-    section.screenshots > button {
-        position: unset;
+    section.screenshots > div > button {
+        position: absolute;
+        left: -4rem;
         display: flex;
         align-items: center;
         justify-content: center;
         width: 3rem;
-        height: unset;
-        aspect-ratio: 1/1;
+        height: 3rem;
         font-size: 2rem;
         color: var(--background);
-        background: black;
-        border: 1px solid black;
-        border-radius: 50% !important;
+        background: #000000;
+        border: none;
+        border-radius: 50%;
         outline: none;
         cursor: pointer;
+        z-index: 20;
         box-shadow: 0 0 5px 2px #00000033;
+    }
+
+    section.screenshots > div > button:nth-of-type(2) {
+        left: unset;
+        right: -4rem;
     }
 
     section.screenshots > button:hover {
