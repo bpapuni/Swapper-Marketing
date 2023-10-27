@@ -78,26 +78,31 @@ function ZoomScreenshot(e) {
     if (e.target.tagName == "BUTTON" || e.target.tagName == "I") {
         return;
     }
-    const zoomed = e.currentTarget.parentElement.classList.contains("zoomed");
+
+    const screenshotSection = e.currentTarget;
+    const zoomed = screenshotSection.classList.contains("zoomed");
+
     if (zoomed) {
-        ZoomOut(e.currentTarget);
+        ZoomOut(screenshotSection);
         UnlockScroll();
-    } else {
-        ZoomIn(e.currentTarget);
+    } else if (e.target.tagName == "IMG") {
+        ZoomIn(screenshotSection);
         LockScroll();
     }
 }
 
 function ZoomIn(e) {
     e.style.cursor = "zoom-out";
-    e.parentElement.classList.add("zoomed");
-    const rect = e.parentElement.getBoundingClientRect();
+    e.getElementsByTagName("div")[0].style.cursor = "zoom-out";
+    e.classList.add("zoomed");
+    const rect = e.getBoundingClientRect();
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     const elementTop = rect.top + scrollTop;
     window.scrollTo(0, elementTop);
 }
 
 function ZoomOut(e) {
-    e.style.cursor = "zoom-in";
-    e.parentElement.classList.remove("zoomed");
+    e.style.cursor = "unset";
+    e.getElementsByTagName("div")[0].style.cursor = "zoom-in";
+    e.classList.remove("zoomed");
 }
