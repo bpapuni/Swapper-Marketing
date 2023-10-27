@@ -255,6 +255,17 @@ section.about .profiles > div > img {
     border-radius: 50%;
 }
 
+section.about .profiles > div > div > span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+section.about .profiles > div > div > span > a {
+    color: #0a66c2;
+    font-size: 1.2rem;
+}
+
 @media (max-width: 424px) {
     h1 {
         font-size: 2rem
